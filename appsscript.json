@@ -1,0 +1,44 @@
+{
+  "timeZone": "America/Denver",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Gmail",
+        "serviceId": "gmail",
+        "version": "v1"
+      }
+    ]
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/gmail.modify",
+    "https://www.googleapis.com/auth/gmail.settings.basic",
+    "https://www.googleapis.com/auth/gmail.settings.sharing",
+    "https://www.googleapis.com/auth/gmail.readonly"
+  ],
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Spam Domain",
+      "logoUrl": "https://raw.githubusercontent.com/aroetter/gmaildomainblock/refs/heads/main/banned_circle.png",
+      "layoutProperties": {
+        "primaryColor": "#d32f2f"
+      }
+    },
+    "gmail": {
+      "name": "Spam Domain",
+      "logoUrl": "https://raw.githubusercontent.com/aroetter/gmaildomainblock/refs/heads/main/banned_circle.png",
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "buildAddOn"
+        }
+      ],
+      "primaryColor": "#d32f2f",
+      "openLinkUrlPrefixes": [],
+      "universalActions": []
+    }
+  }
+}
+
